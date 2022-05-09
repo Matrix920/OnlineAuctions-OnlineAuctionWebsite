@@ -1,0 +1,72 @@
+﻿@using E_Auction_Website.Controllers
+@using E_Auction_Website.Models
+@model IEnumerable<E_Auction_Website.Models.Product>
+
+@{
+    ViewBag.Title = "OthersProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Offered Products</h2>
+
+
+@if (Session[WebsiteController.USER] == null)
+{
+    Response.Redirect("Login");
+}
+@{
+    var user = (User)Session[WebsiteController.USER];
+}
+@using (Html.BeginForm("OthersProducts", "Website", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr>
+            <td>
+                <input type="text" class="form-control" width="60%"  placeholder="product name..." name="ProductName" />
+            </td>
+
+            <td>
+                <input type="text" class="form-control" width="10%"  value="@user.UserID" name="UserID" />
+            </td>
+
+            <td>
+                <input type="submit" class="form-control" width="30%"  value="Search" name="btnSearch" />
+            </td>
+        </tr>
+    </table>
+    
+
+}
+<table class="table">
+    <tr>
+        <th>
+            Product
+        </th>
+        <th>
+           Initial Price
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InitialPrice)
+        </td>
+   
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Username)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "OtherProductDetails", new { ProductID=item.ProductID }) 
+        </td>
+    </tr>
+}
+
+</table>

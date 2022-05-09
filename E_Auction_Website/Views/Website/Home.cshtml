@@ -1,0 +1,32 @@
+﻿@using E_Auction_Website.Models
+@using E_Auction_Website.Controllers
+@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <header>
+        <img src="~/Pictures/e_auction.jpeg" class="img-responsive">
+
+
+    </header>
+    @if (Session[WebsiteController.USER] == null)
+    {
+        Response.Redirect("Login");
+    }
+    
+        <div>
+            <h2></h2>
+
+            <div>
+                @{
+                    var user = (User)Session[WebsiteController.USER];
+                }
+                @Html.ActionLink("My Products", "MyProducts", "Website", new { UserID = user.UserID }, new { @class = "btn btn-danger btn-lg btn-block" })
+                @Html.ActionLink("Offered Products", "OthersProducts", "Website", new { UserID = user.UserID }, new { @class = "btn btn-danger btn-lg btn-block" })
+            </div>
+        </div>
+  
+
+</div>

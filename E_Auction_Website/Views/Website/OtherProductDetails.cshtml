@@ -1,0 +1,94 @@
+﻿@using E_Auction_Website.Controllers
+@using E_Auction_Website.Models
+@model E_Auction_Website.Models.Product
+
+@{
+    ViewBag.Title = "OtherProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.ProductName Details</h2>
+<style>
+    dl dt{
+        float:left;
+        text-align:left;
+    }
+</style>
+<div>
+    @if (Session[WebsiteController.USER] == null)
+    {
+        Response.Redirect("Login");
+    }
+    @{
+        var user = (User)Session[WebsiteController.USER];
+    }
+
+    <hr />
+    <dl class="table table-dark">
+
+ 
+
+        <dt style="text-align:left">
+           Initial Price
+        </dt>
+
+        <dd style="text-align:right">
+            @Html.DisplayFor(model => model.InitialPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </dt>
+
+        <dd style="text-align:right">
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+
+
+        <dt>
+            Highest Bid
+        </dt>
+
+        <dd style="text-align:right">
+            @ViewBag.MaxBid
+        </dd>
+
+        <dt>
+            Your  Bid
+        </dt>
+@using (Html.BeginForm("BidProduct", "Website", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+        <dd>
+            <input type="number" name="OfferedPrice" class="form-control" required autofocus />
+        </dd>
+
+        <dt>
+            Product ID
+        </dt>
+        <dd>
+            <input type="number" name="ProductID" class="form-control" value="@Model.ProductID" readonly/>
+        </dd>
+
+        <dt>
+            User ID
+        </dt>
+        <dd>
+            
+            <input type="number" name="UserID" class="form-control" value="@user.UserID" readonly/>
+        </dd>
+
+        <dt>
+
+        </dt>
+
+        <dd>
+                <input type="submit" class="btn btn-block btn-danger text-info text-center" value="Ok" />
+           
+        </dd>
+}
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "OthersProducts", new { UserID = user.UserID })
+</p>

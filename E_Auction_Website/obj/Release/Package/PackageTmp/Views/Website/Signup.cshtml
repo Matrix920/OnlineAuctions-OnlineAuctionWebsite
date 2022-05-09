@@ -1,0 +1,52 @@
+﻿@model E_Auction_Website.Models.User
+
+@{
+    ViewBag.Title = "New User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Information</h2>
+
+<div>
+    <hr />
+    @using (Html.BeginForm("Signup", "Website", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <table class="table">
+            <tr>
+                <td> Username</td>
+                <td> <input type="text" name="Username" class="form-control" required autofocus /></td>
+
+            </tr>
+            <tr>
+                <td>Tel </td>
+                <td> <input type="number" name="Tel" class="form-control" required /></td>
+
+            </tr>
+            <tr>
+                <td>      Login </td>
+                <td> <input type="text" name="Login" class="form-control" required /></td>
+
+            </tr>
+            <tr>
+                <td>    Password </td>
+                <td><input type="text" name="Password" required class="form-control" /></td>
+
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-block btn-danger text-info text-center" value="Ok" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+<p>
+    @if (ViewBag.Message != null)
+    {
+        <h2 class="bg-warning text-danger">
+            @ViewBag.Message
+        </h2>
+    }
+</p>

@@ -1,0 +1,60 @@
+﻿@using E_Auction_Website.Controllers
+@using E_Auction_Website.Models
+@model E_Auction_Website.Models.User
+
+@{
+    ViewBag.Title = "New User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-danger">Product Information</h2>
+
+<div>
+    @if (Session[WebsiteController.USER] == null)
+    {
+        Response.Redirect("Login");
+    }
+    <hr />
+    @using (Html.BeginForm("AddProduct", "Website", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <table class="table">
+
+            <tr>
+                @{
+                    var user = (User)Session[WebsiteController.USER];
+                }
+                <td>    User ID   </td>
+                <td> <input type="number" name="UserID" value="@user.UserID" class="form-control" required readonly/></td>
+
+            </tr>
+
+            <tr>
+                <td> Product Name</td>
+                <td> <input type="text" name="ProductName" class="form-control" required autofocus /></td>
+
+            </tr>
+            <tr>
+                <td>Initial Price </td>
+                <td> <input type="number" name="InitialPrice" class="form-control" required /></td>
+
+            </tr>
+         
+          
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-block btn-danger text-info text-center" value="Ok" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+<p>
+    @if (ViewBag.Message != null)
+    {
+        <h2 class="bg-warning text-danger">
+            @ViewBag.Message
+        </h2>
+    }
+</p>

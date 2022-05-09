@@ -1,0 +1,64 @@
+﻿@using E_Auction_Website.Models
+@using E_Auction_Website.Controllers
+@model IEnumerable<E_Auction_Website.Models.Product>
+
+@{
+    ViewBag.Title = "MyProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-danger">My Products</h2>
+
+@if (Session[WebsiteController.USER] == null)
+{
+    Response.Redirect("Login");
+}
+<table class="table  table-dark ">
+    <tr>
+        <th>
+            Product
+        </th>
+        <th>
+            Initial Price
+        </th>
+        <th>
+            Is Sold ?
+        </th>
+    
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InitialPrice)
+        </td>
+        <td>
+          @{ 
+              if (item.IsSold)
+              {
+                  <img src="~/Pictures/sold.png" width="35" height="35" />
+              }
+              else
+              {
+                <img src="~/Pictures/unsold.png" width="35" height="35" />
+              }
+        }
+        </td>
+      
+        <td>
+            @Html.ActionLink("Details", "MyProductDetails", new { ProductID=item.ProductID }) 
+        </td>
+    </tr>
+}
+
+</table>
+@{
+    var user = (User)Session[WebsiteController.USER];
+}
+@Html.ActionLink("New Product", "AddProduct", "Website", null, new { @class = "btn btn-danger btn-lg btn-block" })
+
+

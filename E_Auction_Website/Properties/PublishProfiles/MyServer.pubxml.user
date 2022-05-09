@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Matrix\Desktop\WebSite</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/AuctionDB.mdf">
+      <publishTime>06/12/2020 15:14:01</publishTime>
+    </File>
+    <File Include="App_Data/AuctionDB_log.ldf">
+      <publishTime>06/12/2020 15:14:01</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>05/06/2020 11:00:56</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/06/2020 11:13:44</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/06/2020 11:13:44</publishTime>
+    </File>
+    <File Include="bin/E_Auction_Website.dll">
+      <publishTime>06/13/2020 15:59:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/06/2020 11:01:01</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/06/2020 11:00:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/06/2020 11:00:59</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/06/2020 11:01:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/06/2020 11:00:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/06/2020 11:00:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/06/2020 11:00:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/06/2020 11:00:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/06/2020 11:00:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/06/2020 11:00:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/06/2020 11:00:55</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Content/StyleSheet1.css">
+      <publishTime>06/12/2020 14:09:23</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/06/2020 11:00:48</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Models/AuctionModel.edmx.diagram">
+      <publishTime>05/06/2020 11:13:47</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/06/2020 11:13:45</publishTime>
+    </File>
+    <File Include="Pictures/sold.png">
+      <publishTime>05/08/2020 19:12:37</publishTime>
+    </File>
+    <File Include="Pictures/unsold.png">
+      <publishTime>05/08/2020 19:12:37</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/06/2020 11:00:48</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/06/2020 11:00:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>05/06/2020 11:00:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>05/06/2020 11:00:56</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>05/06/2020 11:00:57</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>05/06/2020 11:00:56</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/08/2020 22:45:09</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Views/Website/AddProduct.cshtml">
+      <publishTime>05/08/2020 19:15:39</publishTime>
+    </File>
+    <File Include="Views/Website/Home.cshtml">
+      <publishTime>05/08/2020 22:33:01</publishTime>
+    </File>
+    <File Include="Views/Website/Login.cshtml">
+      <publishTime>05/09/2020 12:54:19</publishTime>
+    </File>
+    <File Include="Views/Website/MyProductDetails.cshtml">
+      <publishTime>05/08/2020 22:47:26</publishTime>
+    </File>
+    <File Include="Views/Website/MyProducts.cshtml">
+      <publishTime>05/08/2020 22:20:25</publishTime>
+    </File>
+    <File Include="Views/Website/OtherProductDetails.cshtml">
+      <publishTime>06/12/2020 14:48:18</publishTime>
+    </File>
+    <File Include="Views/Website/OthersProducts.cshtml">
+      <publishTime>06/12/2020 13:57:02</publishTime>
+    </File>
+    <File Include="Views/Website/Signup.cshtml">
+      <publishTime>05/07/2020 10:41:40</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/06/2020 11:00:35</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/13/2020 15:59:56</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

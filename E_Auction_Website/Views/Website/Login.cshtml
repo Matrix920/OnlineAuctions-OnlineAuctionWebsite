@@ -1,0 +1,31 @@
+﻿@using E_Auction_Website.Controllers
+@{
+    ViewBag.Title = "Home Page";
+}
+@{if (Session[WebsiteController.USER] != null)
+    {
+            Response.Redirect("Home");
+    }
+}
+<div class="w3-card-4">
+
+    @using (Html.BeginForm("Login", "Website", FormMethod.Post, new { @class = "w3-container" }))
+    {
+ <!--   <form class="w3-container" method="post" action="Index">-->
+        <p>
+            <label class="w3-text-brown"><b>Login</b></label>
+            <input class="w3-input w3-border w3-sand" name="Login" type="text" required autofocus>
+        </p>
+        <p>
+            <label class="w3-text-brown"><b>Password</b></label>
+            <input class="w3-input w3-border w3-sand" name="Password" type="password" required>
+        </p>
+        <p>
+            <button class="btn btn-primary btn-lg btn-block" >Login</button>
+        </p>
+    }
+
+    <p>
+        @Html.ActionLink("Create Account", "Signup", "Website", null, new { @class = "btn btn-primary btn-lg btn-block" })
+    </p>
+</div>

@@ -1,0 +1,72 @@
+﻿@using E_Auction_Website.Controllers
+@using E_Auction_Website.Models
+@model E_Auction_Website.Models.Product
+
+@{
+    ViewBag.Title = "MyProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.ProductName Details</h2>
+
+<div>
+    @if (Session[WebsiteController.USER] == null)
+    {
+        Response.Redirect("Login");
+    }
+    <hr />
+    <dl class="dl-horizontal">
+      
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InitialPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InitialPrice)
+        </dd>
+
+
+    </dl>
+
+
+    @{
+        if (Model.IsSold)
+        {
+            <img src="~/Pictures/sold.png" width="60" height="60" />
+        }
+        else
+        {
+            <img src="~/Pictures/unsold.png" width="60" height="60" />
+        }
+    }
+
+    @if (Model.BidOffers.Count > 0)
+    {
+    <table class="table-condensed">
+        <tr><td>Username</td><td>Offered Price</td></tr>
+
+        @{
+            var bidOffers = Model.BidOffers;
+            foreach (BidOffer bo in bidOffers)
+            {
+                <tr>
+                    <td>
+                        @bo.User.Username
+                    </td>
+                    <td>
+                        @bo.OfferedPrice
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+            }
+</div>
+<p>
+    @Html.ActionLink("Set Sold", "SoldProduct", new { ProductID = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "MyProducts",new { UserID=Model.UserID})
+</p>
+<div class="w3-display-bottomright w3-padding-large">
+    @Html.ActionLink("Back to List", "MyProducts", new { UserID = Model.UserID })
+</div>
